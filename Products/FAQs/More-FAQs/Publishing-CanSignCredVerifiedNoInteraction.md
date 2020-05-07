@@ -1,0 +1,3 @@
+**Q. Is it possible to publish a signed credential so that it can be verified by anyone with no interaction with the credential holder?**
+
+**A.** This is theoretically possible but not recommended as it would reduce security. One would actually be publishing a proof, not a credential. Proofs are created from credentials issued to the holder. In this process a zero knowledge proof is created using the credential as well as a nonce to prevent replay attacks. In order to make a proof public and publicly verifiable, one would have to publish the nonce. This essentially reduces the security of the system to that of an x509 certificate, which may be the better choice if a proof is to be published.
