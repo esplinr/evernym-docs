@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "attrNames":["FirstName", "LastName","ID","Phone","Department"],
+    "version":"111.15",
+    "name":"Employee Personal Information"
+  },
+    "sourceId":"LittleCorp Employee ID",
+    "paymentHandle":0
+}

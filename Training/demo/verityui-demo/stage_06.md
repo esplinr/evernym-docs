@@ -1,0 +1,5 @@
+# Demo Complete!
+
+Congratulations, you have created your first demo with Verifiable Credentials! Now a person with a TinyCorp Credential can access BigCorp in a verifiable manner, without having to create BigCorp Credentials. If BigCorp trusts or owns TinyCorp credentials, they will not have to perform a massive and time-consuming assimilation process using human resources. They can simply trust the credential as issued by TinyCorp through a Verifiable Credential transaction. Feel free to experiment and use the Verity UI for any credential exchange you wish. With 2 Verity UI instances and Connect.Me you can create many customized demonstrations for presentations and personal use. 
+
+Although functional, remember that Verity UI is a **demo** tool, using a GUI that requires a person to execute each step of the transaction and credential verification. [Check here](/portal/training/prototype/) if you want to begin developing your own, automated application that can perform multiple functions at once, such as request a Proof and upon validation of that Proof, issue a Credential.

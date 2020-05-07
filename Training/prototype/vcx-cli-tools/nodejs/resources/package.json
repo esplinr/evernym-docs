@@ -1,0 +1,16 @@
+{
+  "name": "vcx-cli-tools",
+  "version": "0.0.0",
+  "description": "VCX CLI Tools",
+  "scripts": {
+    "main": "node VCX-CLI.js"
+  },
+  "dependencies": {
+    "base64url": "^3.0.1",
+    "ffi": "^2.3.0",
+    "ffu": "0.0.1",
+    "make-runnable": "^1.3.6",
+    "node-vcx-wrapper": "node-vcx-wrapper_0.2.41140129-e0d1c6e_amd64.tgz",
+    "qr-image": "^3.2.0"
+  }
+}

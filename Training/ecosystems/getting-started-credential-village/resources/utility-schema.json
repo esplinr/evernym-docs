@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "attrNames": [
+      "Address",
+      "Issue Date"
+    ],
+    "name": "Village Electric",
+    "version": "123.24"
+  },
+  "paymentHandle": 0,
+  "sourceId": "village_electric"
+}

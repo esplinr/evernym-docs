@@ -1,0 +1,15 @@
+{
+  "attrs": [
+    {
+       "name": "FirstName",
+       "restrictions":[{"issuer_did": "6XFh8yBzrpJQmNyZzgoTqB"}]
+    },
+    {
+      "name": "LastName",
+      "restrictions":[{"issuer_did": "6XFh8yBzrpJQmNyZzgoTqB"}]
+    }
+  ],
+  "sourceId":"999999",
+  "name": "Proof",
+  "revocationInterval": {}
+}

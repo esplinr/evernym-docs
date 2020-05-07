@@ -1,0 +1,35 @@
+{
+  "attrs":[
+    {
+      "name": "Date Of Birth", "restrictions": [
+        {
+          "issuer_did":"BrjE2TQthg4Xa6TfRNujYv"
+        }
+      ]
+    },
+    {
+      "name":"Country Of Origin", "restrictions": [
+        {
+          "issuer_did":"BrjE2TQthg4Xa6TfRNujYv"
+        }  
+      ]
+    },
+    {
+      "name":"Address", "restrictions": [
+        {
+          "issuer_did":"Wip1SWFGTTt3DFUU5JSiej"
+        }  
+      ]
+    },
+    {
+      "name":"Issue Date", "restrictions": [
+        {
+          "issuer_did":"Wip1SWFGTTt3DFUU5JSiej"
+        }  
+      ]
+    }
+  ],
+  "sourceId":"333333",
+  "name": "Credential Village Bank Proof Request",
+  "revocationInterval": {}
+}

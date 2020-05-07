@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"></script>
+    <script src = "vcx-client.js"></script>
+    <style>
+        h3{
+          border-radius: 12px;
+          color:white;
+          padding:8px;
+          height:30px;
+          width: 80%;
+          background-color: rgba(12,99,100,.56);
+        }
+        button{
+          font-size:22px;
+          height:80px;
+          background-color:rgba(146, 206, 124, 0.4);
+          color:rgba(200,34,12,.7);
+          border-radius: 8px;
+        }button:hover{
+          background-color:rgba(186, 206, 124, 0.4);
+          cursor: pointer;
+        }
+        #qr{
+          width:300px;
+          height:300px;
+          border:1px solid black;
+        }
+        #message{
+          display: inline;
+          font-size:32px;
+          color:rgba(120,0,09,.7);
+        }
+    </style>
+</head>
+<body>
+  <h1>Welcome to the VCX Web App Toolkit </h1>
+  <a href="vcx-build_cred.html">Build Credential Definition</a>
+  <h3>Client Files</h3>
+    <ol>
+      <li>vcx-index.html</li>
+      <li>vcx-client.js</li>
+    </ol>
+  <h3>Server Files</h3>
+    <ol>
+      <li>package.json</li>
+      <li>vcx-server.js</li>
+      <li>vcx-web-tools.js</li>
+    </ol>
+  <img id="qr" align="middle"/> &nbsp;<div id="message">Interactive messages will appear here.</div>
+  <br>
+  <br>
+  <button onclick="getQR('http://172.28.128.21:5000/api/v1/proof_credential')" >Click for Connection Request QR</button>
+  <br>
+  <br>
+  <label>Select Credential to Prove</label>
+  <select id="proof_cred">
+    <option value="passport">passport</option>
+    <option value="employee">employee</option>
+  </select>
+  <br>
+  <br>
+  <label>Select Credential to Give </label>
+  <select id="give_cred">
+    <option value="employee">employee</option>
+    <option value="passport">passport</option>
+  </select>
+  <br>
+  <br>
+  
+</body>
+</html>
