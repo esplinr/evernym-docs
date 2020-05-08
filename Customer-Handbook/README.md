@@ -145,9 +145,9 @@ Upon receiving a security report, Evernym commits to:
 * Triage the security report within 3 business days, and respond to the reporter.
   * The triage will consist of an initial prioritization assessment and identification of next steps.
 * Prioritize the fix for an appropriate product release (where the scope of the fix matches the expectations set by the above description of versions).
-  * Per our security guidelines, Security Priority 1 issues will be fixed in the next possible release (where backwards incompatible changes cannot be included in a service pack). Mitigation strategies will be disclosed as soon as they are available.
-  * Security Priority 2 issues will be fixed in the next Major / Minor version, but not included in a service pack.
-  * Security Priority 3 issues will be addressed when possible.
+  * Per our security guidelines, Security Severity 1 issues will be fixed in the next possible release (where backwards incompatible changes cannot be included in a service pack). Mitigation strategies will be disclosed as soon as they are available.
+  * Security Severity 2 issues will be fixed in the next Major / Minor version, but not included in a service pack.
+  * Security Severity 3 issues will be addressed when possible.
 * Publicly disclose the vulnerability after a mitigation has been identified or a fix has been released. If such disclosure will take more than 90 days, we commit to discuss the timeline of the disclosure with the reporter.
 
 Due to the low quality of the automated security scans that we have submitted to us, we do not treat them with the same priority as a clear demonstration of a product vulnerability.
@@ -213,38 +213,64 @@ Evernym is happy to provide a professional services estimate for assisting with 
 
 Partners and resellers who provide Level 1 support for their customers might be granted direct access to Level 2 support as they show sufficient familiarity with our products.
 
-## Categorizing Issue Priority
+## Categorizing Issue Severity
 
 When a customer faces an issue in a deployment of Evernym products, the customer can expect assistance based on the severity of the issue and the support level of the customer’s subscription. This section sets expectations for how Evernym intends to respond to issues, but Evernym intends to exceed these expectations whenever possible.
 
-Priority 1: Interruption to a production service
-* Within 4 hours of a purported P1 issue being reported, Evernym will notify the customer of the results of the issue triage and explain next steps.
-* Evernym will provide follow-up status updates every 4 hours thereafter, until production service is restored. The issue will then be downgraded to a lower priority.
-* If the customer is subscribed to business hours support, then the time periods will be based on business hours in the timezone of the nearest Evernym customer service office to the customer.
+Severity 1: Interruption to a production service
+* A production system is either down or unresponsive, which has direct and significant impact on customers and users.
+* Within the contractual "Triage" commitment, Evernym will notify the customer of the results of the issue triage and explain next steps.
+* Evernym will provide follow-up status updates regularly, until production service is restored. The issue will then be downgraded to a lower severity.
+* If the customer is subscribed to business hours support, then the time periods will be based on US business hours.
 * If the customer is subscribed to 24x7 support, the issue will be transferred between Evernym customer service offices as each office finished the business day in their timezone.
 
-Priority 2: Significant impact to usage (including outages of development systems)
-* Within 8 hours of a purported P2 issue being reported, Evernym will notify the customer of the results of the issue triage and explain next steps.
-* Evernym will provide follow-up status updates every business day thereafter. Once a workaround is provided to the customer, the issue will then be downgraded to a lower priority.
+Severity 2: Significant impact to usage
+* Within the contractual "Triage" commitment, Evernym will notify the customer of the results of the issue triage and explain next steps.
 
-Priority 3: Normal inquiry (including questions and normal bug reports)
-* Evernym will respond to P3 issues by the end of the business day after the issue is reported.
-* Until the issue is resolved, Evernym will provide follow-up status updates as new information is available, but no less frequently than monthly.
+Severity 3: Transient or minor issues to production systems
+* Transient or other minor issues that negatively impact the customer or end user experience on production systems. This also applies to transient, significant events such as connection loss or data loss in transit that can be corrected through the user retrying the operation.
+
+Severity 4: Issues impacting non-production systems
+
+Severity 5: Normal inquiry (including questions and normal bug reports)
+* Until the issue is resolved, Evernym will provide follow-up status updates as new information is available.
 
 ## Disruptions to Hosted Products (SaaS)
 If usage of an Evernym hosted product is impaired, Evernym will take the following actions.
 
-Priority 1: Outages
-* Upon recognizing an outage, Evernym will immediately update our service availability dashboard and issue a notification via X.
-* Evernym will provide updates notifications every 2 hours through X until service is restored.
-* Within one week of the outage, Evernym will publish a post-mortem incident analysis (on our web site?).
+Severity 1: Outages
+* Upon recognizing an outage, Evernym will immediately update our service availability dashboard and issue a notification to impacted customers using our customer chat.
+* Evernym will provide update notifications every 2 hours through the customer chat until service is restored.
+* Within one week of the outage, Evernym will publish a post-mortem incident analysis.
 * Evernym will then notify the technical contact at each customer account in writing. This will usually be provided as part of our regular newsletter.
 
-Priority 2: Service Degradation (including slowed performance or impaired features)
-* Upon recognizing a service degradation, Evernym will immediately update our service availability dashboard and issue a notification via X.
-* Evernym will provide updates notifications every 4 hours through X until service is normalized.
-* Within one week of the outage, Evernym will publish a post-mortem incident analysis (on our web site?)
+Severity 2: Service Degradation (including slowed performance or impaired features)
+* Upon recognizing a service degradation, Evernym will immediately update our service availability dashboard and issue a notification via the customer chat.
+* Evernym will provide updates notifications every 4 hours through the customer chat until service is normalized.
+* Within one week of the outage, Evernym will publish a post-mortem incident analysis.
 * Evernym will then notify the technical contact at each customer account in writing. This will usually be provided as part of our regular newsletter.
 
-Priority 3: Other Incidents
+Severity 3: Other Incidents
 * Customer communication for other incidents will be handled on a case by case basis.
+
+## Engaging with Customer Support
+
+To receive support for Evernym products, send an email to support@evernym.com. This will allow Evernym to track the concern to a satisfactory conclusion. Non-urgent questions can also be asked in the support-questions channel of the Evernym customer chat, but be aware that other Evernym customers can see those questions.
+
+When engaging with Evernym support, Customers have the following responsibilities:
+* Be polite
+* Communicate in English
+* Provide adequate information to triage the issue
+  * Describe the problem fully
+    * What was observed
+    * What was expected
+    * What is the environment
+    * What is the impact
+  * Provide any relevant logs
+* Have seen the problem in a supported environment
+  * Currently support versions
+  * Supported platforms (operating systems, etc)
+* Recognize the support level to which you are subscribed
+  * Support outside of US Business Hours is provided by explicit agreement, except at Evernym's discretion.
+
+If you are unable to fulfill these expectations, we will still try and help. But please understand that our ability to assist will be constrained.
