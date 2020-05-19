@@ -14,6 +14,7 @@ If none of this work has been done in advance, the legal system eventually appoi
 # How to transition from Sovrin Staging Net to Sovrin Main Net?
 1. Register a DID as an endorser on Sovrin Main Net.
 2. Re-run the provision scripts to setup a peer connection with the Evernym Agency and generate a LibVCX configuration file with the correct values.
+3. Re-write any schemas and cred-defs to Main Net.
 
 
 # How to become an Endorser on the Sovrin Networks?
