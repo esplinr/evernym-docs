@@ -126,3 +126,8 @@ There are currently no announced plans to release a production token.
 
 # Is it easy to migrate away from your solution?
 Evernym supports industry standard protocols for DID Communication, as well as for Aries Agent interactions, allowing portability of credentials. Our credential storage leverages a vendor independent implementation from Hyperledger Indy. Further, the source code for the application is available to the customer under a license that permits the customer to self-support or study the code sufficient for migration.
+
+
+# What Personal Identifying Information is collected by your products?
+
+All sensitive data is encrypted. PII is provided to the credential holders for storage on their mobile devices. Our cloud agents do not access any of the data. The issuing system will only store copies of credentials when explicitly configured to do so.
