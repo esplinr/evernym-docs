@@ -50,7 +50,7 @@ Hot Fix Release
 * Hot fixes are not delivered except as coordinated by a technical architect.
 * Customers are expected to upgrade to the next service pack release that contains the fix included in the hot fix.
 
-## Policies for Specific Products
+## Policies for Specific Products **DRAFT**
 
 Hyperledger Indy and Aries
 * Evernym does not support artifacts provided by Hyperledger Indy or Aries.
