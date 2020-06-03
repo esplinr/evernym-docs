@@ -138,7 +138,7 @@ DIDs, keys and credentials are stored in a database which is encrypted using a k
 
 
 # Is there any other sensitive information stored on the Connect.Me user's device?
-Connect.Me stores the full history of a user's interactions, including all of the DIDs, credentails, proofs and secure messages which have been exchanged, in an encrypted database on the device. It also stores activity logs which can be shared with Evernym with the user's permission when filing a bug report, and certain device identifiers that are used for performance monitoring and analytics - the privacy policy contains more details: https://connect.me/privacy.html
+Connect.Me stores the full history of a user's interactions, including all of the DIDs, credentials, proofs and secure messages which have been exchanged, in an encrypted database on the device. It also stores activity logs which can be shared with Evernym with the user's permission when filing a bug report, and certain device identifiers that are used for performance monitoring and analytics - the privacy policy contains more details: https://connect.me/privacy.html
 
 
 # Do you have any security penetration testing results to share?
