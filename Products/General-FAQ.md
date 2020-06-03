@@ -131,3 +131,15 @@ Evernym supports industry standard protocols for DID Communication, as well as f
 # What Personal Identifying Information is collected by your products?
 
 All sensitive data is encrypted. PII is provided to the credential holders for storage on their mobile devices. Our cloud agents do not access any of the data. The issuing system will only store copies of credentials when explicitly configured to do so.
+
+
+# What mechanisms are used by Connect.Me to secure users' private DIDs, keys & credentials?
+DIDs, keys and credentials are stored in a database which is encrypted using a key that lives in the secure enclave on the device.
+
+
+# Is there any other sensitive information stored on the Connect.Me user's device?
+Connect.Me stores the full history of a user's interactions, including all of the DIDs, credentails, proofs and secure messages which have been exchanged, in an encrypted database on the device. It also stores activity logs which can be shared with Evernym with the user's permission when filing a bug report, and certain device identifiers that are used for performance monitoring and analytics - the privacy policy contains more details: https://connect.me/privacy.html
+
+
+# Do you have any security penetration testing results to share?
+Our software has been audited and penetration tested by customers in the past, but we do not have a current report which we are at liberty to share.
