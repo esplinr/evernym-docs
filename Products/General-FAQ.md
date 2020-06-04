@@ -154,3 +154,7 @@ There are a few ways to achieve this from a technical perspective:
 * Multiple single-tenant configurations. This is a variation on the multi-tenant configuration where you are operating a separate instance the software on behalf of your customer.
 
 Lots of people are taking a flexible approach to get things off the ground - preserving a path to full decentralisation for when the market matures, but removing that burden for the early adopters.
+
+
+# My Aries-compatible wallet app can't connect with a LibVCX-based issuer. I try to accept the connection but I get a timeout waiting for the protocol to complete. What is wrong?
+The [Aries Connection RFC](https://github.com/hyperledger/aries-rfcs/tree/master/features/0160-connection-protocol#3-connection-acknowledgement) states that after sending a `connection-request` and receiving a `connection-response` message back, a wallet _SHOULD_ (but not _MUST_) send an `ack` to let the invitee know that the connection was correctly established. Not all wallets, inclusing Streetcred and others, implement this last step, which LibVCX expects before updating the connection status to `Status.Accepted`. If you are implementing your own wallet, send a `trust-ping` or other message after receiving a `connection-response` and everything will work as expected. We have asked Streetcred to implement the recommnendation in the RFC, and in the meantime we are looking at ways to make LibVCX more tolerant of other Aries implementations.
