@@ -143,3 +143,14 @@ Connect.Me stores the full history of a user's interactions, including all of th
 
 # Do you have any security penetration testing results to share?
 Our software has been audited and penetration tested by customers in the past, but we do not have a current report which we are at liberty to share.
+
+
+# Would it be possible to “ACT on BEHALF of” a corporate customer, using a short form legal agreement to be essentially a surrogate Issuer and Verifier?
+Yes. The most straightforward approach is to issue under a separate DID which is known to belong to your customer but be managed by you. We have envisaged future versions of the protocols which could explicitly separate the DID of the issuing authority (customer) from that of the service provider (you), and make that relationship explicit to anyone consuming the credential - but that isn’t fully designed at this point.
+
+There are a few ways to achieve this from a technical perspective:
+* “Guardianship” is where one entity manages the keys and wallet of another. It could be the scenario you describe, or an elderly person with a relative that has power of attorney, or a baby whose inoculation records are managed by its parents. In your scenario, RBS would be the guardian for John Lewis, and able to act on their behalf albeit as a company rather than a person. You can find out more about Guardianship here: https://www.evernym.com/blog/making-digital-identity-work-for-all/
+* Multi-tenant configuration. You could have a Verity multi-tenant installation (this is just coming out of development now) which would enable multiple issuing instances to be configured and operated on the same platform, but separately (ie each with their own DIDs, cred defs etc). You would operate the customer instance on their behalf, along with a legal agreement not to do bad things like impersonate them and issue false credentials). Once the customer is ready to take on their own run & operate, you could hand over the customer wallet and they could rotate their keys to take it in house.
+* Multiple single-tenant configurations. This is a variation on the multi-tenant configuration where you are operating a separate instance the software on behalf of your customer.
+
+Lots of people are taking a flexible approach to get things off the ground - preserving a path to full decentralisation for when the market matures, but removing that burden for the early adopters.
