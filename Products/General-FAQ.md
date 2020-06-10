@@ -158,3 +158,17 @@ Lots of people are taking a flexible approach to get things off the ground - pre
 
 # My Aries-compatible wallet app can't connect with a LibVCX-based issuer. I try to accept the connection but I get a timeout waiting for the protocol to complete. What is wrong?
 The [Aries Connection RFC](https://github.com/hyperledger/aries-rfcs/tree/master/features/0160-connection-protocol#3-connection-acknowledgement) states that after sending a `connection-request` and receiving a `connection-response` message back, a wallet _SHOULD_ (but not _MUST_) send an `ack` to let the invitee know that the connection was correctly established. Not all wallets, inclusing Streetcred and others, implement this last step, which LibVCX expects before updating the connection status to `Status.Accepted`. If you are implementing your own wallet, send a `trust-ping` or other message after receiving a `connection-response` and everything will work as expected. We have asked Streetcred to implement the recommnendation in the RFC, and in the meantime we are looking at ways to make LibVCX more tolerant of other Aries implementations.
+
+
+# What strategies do enterprises use to secure their private keys and other cryptographic material in production environments?
+
+Best practices are driven by the principle of diffuse trust (don’t put all your eggs in one basket) and least privilege. Today, that principle manifests in tools like HashiCorp Vault. Evernym has explored the possibility of a fully decentralized version of such a tool, where all IT staff and other members of an org hold their own subset of keys in wallets on edge devices, and where these individual agents cooperate via protocol to do group signatures and so forth, to get work done. But this is still at the design level.
+
+This generic discussion about wallets is useful in considering their attributes and how to secure them:
+https://github.com/hyperledger/aries-rfcs/tree/master/concepts/0050-wallets
+￼
+Your use case will determine whether it is more important to protect against unauthorized access, or more important to protect against loss of access. Some considerations:
+* If you lose access, you can generate new keys and issue new credentials or reissue existing credentials, but you can't revoke previously issued credentials. For most current use cases, that would be an acceptable outcome.
+* Because of the privacy preserving nature of a self-sovereign credential, you won't have visibility into fraudulently issued credentials unless you are also the verifier of the credential. Depending on your use case, there are techniques for limiting the damage of a fraudulent credential, such as a governance framework that specifies that verifiers will only accept a credential within X weeks if issuance.
+* If you detect a fraudulent credential, you can revoke previous credentials or notify verifiers to not trust such credentials.
+* Best practices for preventing unauthorized access include ensure that collaboration of multiple trusted parties is required to access the wallet, and each access should be automatically logged. One way to do this is to keep your issuing keys in a wallet and put the password in a manager that requires multiple factors to access and automatically logs each access. Then you can have each factor controlled by a different person. This obviously makes it hard to use the wallet to issue credentials.
