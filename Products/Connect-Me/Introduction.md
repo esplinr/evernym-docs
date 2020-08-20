@@ -1,6 +1,8 @@
 ## Introduction
 
-Connect.Me is available for both iOS and Android. For iOS devices it works with iOS 9 and later.
+Connect.Me is available for both iOS and Android. Supported operating systems:
+* Android 6+ 64bit
+* iOS 10+
 
 This app allows your agent on your device to interact with the Agents within your chosen Agency, in this case, Evernym. <!--Is Evernym the agency or the agent in this scenario--> The Agents within the Agency then interact with the Sovrin ledger to provide you with valid pieces of your identity, your accomplishments, and more.
 
