@@ -172,3 +172,9 @@ Your use case will determine whether it is more important to protect against una
 * Because of the privacy preserving nature of a self-sovereign credential, you won't have visibility into fraudulently issued credentials unless you are also the verifier of the credential. Depending on your use case, there are techniques for limiting the damage of a fraudulent credential, such as a governance framework that specifies that verifiers will only accept a credential within X weeks if issuance.
 * If you detect a fraudulent credential, you can revoke previous credentials or notify verifiers to not trust such credentials.
 * Best practices for preventing unauthorized access include ensure that collaboration of multiple trusted parties is required to access the wallet, and each access should be automatically logged. One way to do this is to keep your issuing keys in a wallet and put the password in a manager that requires multiple factors to access and automatically logs each access. Then you can have each factor controlled by a different person. This obviously makes it hard to use the wallet to issue credentials.
+
+
+# What predicate support currently exists?
+Evernym products like Verity, the Mobile SDK, and Connect.Me support the same predicates as exist in LibIndy: "<", "<=", ">=", ">".
+
+We plan to expand this predicate support over time.
