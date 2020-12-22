@@ -1,14 +1,21 @@
 These upgrade notes assume that you are using an Ubuntu Bionic VM for your Agent. Users of Ubuntu Xenial, RHEL, or CentOS will need to adapt the instructions accordingly.
 
+### Known Issues
+* Reject Proof is broken. This is fixed in LibVCX 0.9.3.
+
 ### Prerequisites
 
 Ensure that you are running LibVCX version 0.4.64 or 0.4.59 and LibIndy version 1.12.0.
 
 `Before upgrading, it is recommended that you back up your system or take a snapshot of your VM`
 
+We recommend using LibNullPay as the payment library. LibSovToken is only needed to test token functionality on Sovrin StagingNet and has only been packaged for Ubuntu Xenial. If you are currently using LibSovToken, you can switch to LibNullPay in the configuration without needing to migrate any data.
+
+If you are using Ubuntu Linux, we recommend using Ubuntu 18.04 Bionic. For this release, we continue to support Ubuntu 16.04 Xenial for those who choose not to upgrade at this time. We will drop support for Ubuntu Xenial in our next release.
+
 ### Upgrade the Libraries
 
-Retrieve the libraries needed for the upgrade from a single horizontal line of the [resources web page](/portal/software-downloads/). For this upgrade, use the line with libvcx version 0.8.72. You will need libraries for libvcx, libindy, a payment plugin, and the wrapper for whichever scripting language you use (python3 or nodejs). Copy these onto your Agent VM.
+Retrieve the libraries needed for the upgrade from a single row of the [resources web page](/portal/software-downloads/). For this upgrade, use the line with libvcx version 0.8.72. You will need libraries for libvcx, libindy, a payment plugin, and the wrapper for whichever scripting language you use (python3 or nodejs). Copy these onto your Agent VM.
 
 Using these files, run the installation (upgrade) command for libvcx on your VM.
 
@@ -30,9 +37,9 @@ Update the PYTHONPATH environment variable in your .bashrc to point to the new w
 
 `NodeJS`
 
-Node.js v8 is no longer receiving maintenance by the Node.js community, so we do not support this version of LibVCX running on versions of Node.js older than v10. If necessary, please upgrade your install of Node.js while upgrading LibVCX.
+If necessary, please upgrade your install of Node.js while upgrading LibVCX. Node.js v8 is no longer receiving maintenance by the Node.js community, so we recommend that you upgrade to Node.js v10. If you are using Ubuntu Linux, we recommend using Node.js v10 on Ubuntu 18.04 Bionic. We still support using this version of LibVCX with Node.js v8 on Ubuntu 16.04 Xenial, but will drop that support in our next release.
 
-Copy the new node wrapper into your NodeJS project directory. Verify that the package versions required for this version of libvcx are in your packages.json file. Edit your NPM package.json file accordingly, remembering to update the node-vcx-wrapper's version, and re-run `npm install`
+To upgrade, copy the new node wrapper into your NodeJS project directory. Verify that the package versions required for this version of libvcx are in your packages.json file. Edit your NPM package.json file accordingly, remembering to update the node-vcx-wrapper's version, and re-run `npm install`
 
 ```json
 {
@@ -77,13 +84,13 @@ Added ability to accept a duplicate connection by redirecting to the already exi
 * `vcx_connection_get_redirect_details` - gets redirection information.
    
 Example flow:   
-1. Faber sends invite to ALice.
+1. Faber sends invite to Alice.
 2. Alice creates a connection with Faber.
-3. Faber exchange messages with ALice.
+3. Faber exchange messages with Alice.
 3. Faber sends a new invite to Alice. 
-4. Alice creates a new Connection object and redirects it to existing ont with `vcx_connection_redirect`.
+4. Alice creates a new Connection object and redirects it to existing one with `vcx_connection_redirect`.
 5. Faber receives redirection response congaing old Alice DIDs/Keys.
-6. Faber exchange messages with ALice.
+6. Faber exchange messages with Alice.
 
 `Disclose Proof in LibVCX`
 Added a new function `vcx_disclosed_proof_decline_presentation_request` to explicitly reject a presentation request.
