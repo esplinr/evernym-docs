@@ -178,3 +178,15 @@ Your use case will determine whether it is more important to protect against una
 Evernym products like Verity, the Mobile SDK, and Connect.Me support the same predicates as exist in LibIndy: "<", "<=", ">=", ">".
 
 We plan to expand this predicate support over time.
+
+
+# How many attributes can be in a single credential?
+
+Due to limitations in Indy, a schema definition cannot safely exceed 125 attributes.
+
+
+# What is required for Connect.Me to communicate with the Sovrin Network?
+
+The Sovrin Network allows validator nodes to accept connections on TCP ports between 9700 and 9800, so communication will fail if those ports are blocked on your network.
+
+Also, Indy uses the ZeroMQ library to communicate between clients and the ledger. So deep packet inspection must not block ZMQ traffic.
