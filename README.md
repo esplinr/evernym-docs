@@ -5,7 +5,7 @@ This repository contains documentation that spans Evernym products. You can find
 At Evernym, we believe that transparent communication will improve how we work and increase the confidence of those who rely on us. As an Evernym customer or partner, we invite you to provide feedback via issues on this project.
 
 # Contents
-* [Customer Handbook](Customer-Handbook/)
+* [Customer Manual](Customer-Manual/)
 * [Product Documentation](Products/)
 * [Training](Training/)
 
