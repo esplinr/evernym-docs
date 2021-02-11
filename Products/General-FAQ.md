@@ -187,6 +187,11 @@ Due to limitations in Indy, a schema definition cannot safely exceed 125 attribu
 
 # What is required for Connect.Me to communicate with the Sovrin Network?
 
-The Sovrin Network allows validator nodes to accept connections on TCP ports between 9700 and 9800, so communication will fail if those ports are blocked on your network.
+The Sovrin Network allows validator nodes to accept connections on TCP ports between 9700 and 9800, so communication will fail if your network blocks those ports to outbound traffic. Also, deep packet inspection must not block the ZeroMQ (ZMQ) protocol, as that is used for communication between clients and the ledger.
 
-Also, Indy uses the ZeroMQ library to communicate between clients and the ledger. So deep packet inspection must not block ZMQ traffic.
+Connect.Me also communicates with the Evernym Consumer Agency (CAS) at this address: https://agency.evernym.com:443
+
+
+# What platforms does Connect.Me support?
+
+iOS 11 or newer, and Android 6.0 or newer.
