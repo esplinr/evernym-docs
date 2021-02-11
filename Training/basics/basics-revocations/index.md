@@ -1,3 +1,0 @@
-## Revocations
-
-A Revocation is the removal of validity of a Credential issued to an Identity Owner by the Issuer. The Issuer can choose at will to determine that the Credential is no longer valid, for any reason they choose. This is like having your driver's license suspended for too  many speeding tickets. The Department of Motor Vehicles could revoke the validitiy of your Digital Driver's License Credential if you don't pay a speeding ticket. This would be done by putting the Credential Issued on a Revocation Registry, which is always checked when a Proof is validated. 

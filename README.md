@@ -6,10 +6,3 @@ At Evernym, we believe that transparent communication will improve how we work a
 
 # Contents
 * [Customer Manual](Customer-Manual/)
-* [Product Documentation](Products/)
-* [Training](Training/)
-
-# Next Steps
-1. Decide on a license for this repository: all-rights-reserved or CC-BY? 
-1. Browse in GitHub, or publish somewhere?
-1. Generate pages with layout and links for content and back / next?

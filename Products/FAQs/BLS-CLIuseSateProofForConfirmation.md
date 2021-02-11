@@ -1,3 +1,0 @@
-**Q. How does the CLI use State Proof for confirmation?**
-
-**A.** When a transaction is written to the ledger, BLS signatures of the validator nodes that confirmed consensus at the time are appended to the transaction. When a client later requests the transaction from the ledger, it is able to get it from any single validator or observer node, and confirm its authenticity by checking the BLS signatures. If it is an unsigned transaction, perhaps because it was written to the ledger before the BLS signature scheme was implemented, then a client must reach out to at least 2F+1 nodes, compare results, and confirm authenticity.
