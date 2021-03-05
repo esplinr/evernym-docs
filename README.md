@@ -6,3 +6,7 @@ At Evernym, we believe that transparent communication will improve how we work a
 
 # Contents
 * [Customer Manual](Customer-Manual/)
+
+
+# Product Documentation
+* [Verity](https://github.com/evernym/verity-sdk/tree/master/docs)
