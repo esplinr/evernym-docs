@@ -44,6 +44,7 @@ Our support professionals want to assist our customers, but are limited based on
 * Customers must provide instructions for reproducing issues starting with a clean version of the product with no customizations on a supported environment.
 * Evernym support engineers will not debug customer code except under a separate agreement.
 * Support is for defined environments. Customers can use other environments, but must reproduce issues on the defined supported environment before contacting Evernym support engineers.
+* Support outside of US business hours is only provided by explicit agreement, except at Evernym's discretion.
 
 ### Categorizing Issue Severity
 
@@ -95,7 +96,6 @@ Your collaboration with Evernym support will be more productive if you follow th
 1. Communicate in English.
 1. Be polite, even when you are under pressure.
 1. Recognize the support level to which you are subscribed.
-  * Support outside of US Business Hours is only provided by explicit agreement, except at Evernym's discretion.
 1. Provide adequate information to investigate any issue so that we minimize rounds of back-and-forth communication.
 1. Send a separate email for each issue so that it is easier for us to route it to the correct member of the team.
 
