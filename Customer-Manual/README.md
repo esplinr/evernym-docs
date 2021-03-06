@@ -33,7 +33,7 @@ Standard production support entitles customers to raise issues categorized as SE
 
 Any message sent to the emergency escalation email address will be copied to support@evernym.com so that a ticket is created.
 
-Please include in your email the best way to reply to you, whether phone, email, Evernym Customer Slack, or some other method.
+Please include in your email the best way to contact you, whether phone, email, Evernym Customer Slack, or some other method.
 
 ### Limitations on Support
 
