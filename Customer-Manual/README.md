@@ -5,7 +5,7 @@ This manual helps customers understand Evernym’s support obligations, and how 
 
 ## Support Services
 
-Evernym provides support from the world’s experts in Self Sovereign Identity. Support for each product is tailored to that product, whether it is deployed on-premise or via SaaS. Details of our support policies are available in the [Support Services Addendum](https://www.evernym.com/addendum-support-services/) to our customer agreement.
+Evernym provides support from the world’s experts in Self Sovereign Identity. Support for each product is tailored to that product, whether it is deployed on-premise or via SaaS. Our contractual support policies are available in the [Support Services Addendum](https://www.evernym.com/addendum-support-services/) to our customer agreement.
 
 Some customers may choose to contract for additional services that would be handled separate from the core support offering described in this document, such as:
 * an assigned support engineer to oversee the account and verify that all support escalations are appropriately handled,
