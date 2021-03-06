@@ -71,7 +71,13 @@ Severity 5: Normal inquiry (including questions and normal bug reports)
 
 ### Disruptions to Hosted Products (SaaS)
 
-If usage of an Evernym hosted product is impaired, Evernym will take the following actions.
+#### SaaS Maintenance Window
+
+Most maintenance to Evernym systems is performed transparently to users, but sometimes systems must be brought down. For this purpose, Evernym has scheduled a weekly maintenance window on Tuesdays from 9PM-10PM Mountain Time. We strive to minimize impairment to service, so it is unlikely that you will notice an interruption during the maintenance window.
+
+#### Incident Policy
+
+If usage of an Evernym hosted product is impaired outside of the maintenance window, Evernym will take the following actions.
 
 Severity 1: Outages
 * Upon recognizing an outage, Evernym will immediately update our service availability dashboard and issue a notification to impacted customers using our customer chat.
