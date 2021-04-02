@@ -5,6 +5,7 @@ This repository contains documentation that spans Evernym products. You can find
 At Evernym, we believe that transparent communication will improve how we work and increase the confidence of those who rely on us. We invite you to provide feedback via issues on this project. If you are an Evernym customer or partner, you can also raise support tickets for assistance.
 
 # Contents
+* [Code of Conduct](Code-of-Conduct.md)
 * [Customer Manual](Customer-Manual/)
 
 
